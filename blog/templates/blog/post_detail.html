@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Django Blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Django Blog</a></h1>
+        </div>
+
+        {% if post.published_date %}
+            {{ post.published_date }}
+        {% endif %}
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </body>
+</html>
