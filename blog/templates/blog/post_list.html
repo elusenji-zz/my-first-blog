@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Project Lusenji: Django Blog</title>
-</head>
-<body>
-<p>Hi there!</p>
-<p>This stuff works!</p>
-</body>
+    <head>
+        <title>Django Blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="">Django Blog</a></h1>
+        </div>
+
+        {% for post in posts %}
+        <div>
+        	<p>Published: {{ post.published_date }}</p>
+        	<p>Author: {{ post.author }}</p>
+        	<h1><a href="">{{ post.title }}</a></h1>
+        	<p>{{ post.text|linebreaksbr }}</p>
+        </div>
+        {% endfor %}
+    </body>
 </html>
